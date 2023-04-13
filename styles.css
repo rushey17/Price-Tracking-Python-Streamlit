@@ -1,0 +1,16 @@
+/* styles.css */
+
+.centered {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.fetch-button {
+   background-color: #ffdddd;
+   color: #000000;
+   padding: 10px 20px;
+   font-size: 18px;
+   border: none;
+   border-radius: 5px;
+}
