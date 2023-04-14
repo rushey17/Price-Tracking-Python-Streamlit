@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 st.set_page_config(page_title="Stock Price Tracker")
 st.header("User Input")
 
-with open("styles.css", "r") as f:
+with open("styles/styles.css", "r") as f:
     custom_css = f.read()
 st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
 
