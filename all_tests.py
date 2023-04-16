@@ -28,7 +28,7 @@ def get_symbol_by_company_name(company_name):
 
 def get_stock_data_by_date(company_name, start_date, end_date):
     symbol = get_symbol_by_company_name(company_name)
-    equity_details_df = pd.read_csv(f'/multipage_app/nse_data/nse_stocks_data/{symbol}.csv') #Date,Open,High,Low,Close,Adj Close,Volume
+    equity_details_df = pd.read_csv(f'./multipage_app/nse_data/nse_stocks_data/{symbol}.csv') #Date,Open,High,Low,Close,Adj Close,Volume
     equity_details_df['Date'] = pd.to_datetime(equity_details_df['Date'])
     start_close_price = equity_details_df[equity_details_df['Date'] == start_date]['Close'].values[0]
     end_close_price = equity_details_df[equity_details_df['Date'] == end_date]['Close'].values[0]
