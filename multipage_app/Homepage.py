@@ -14,9 +14,11 @@ st.title("Check Your Investment!")
 # Inject CSS with Markdown
 st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
-# stock_symbols = ['AAPL', 'GOOGL', 'AMZN', 'TSLA', 'MSFT', 'NFLX', 'FB', 'NVDA', 'PYPL', 'AMGN', 'RELIANCE.NS', 'HDFC.NS']
+default_stocks = ['Power Finance Corporation Limited', 'Bank of Baroda', 'Muthoot Finance Limited', 'InterGlobe Aviation Limited', 
+                  'RBL Bank Limited', 'Granules India Limited', 'L&T Technology Services Limited', 'Eicher Motors Limited', 
+                  'HDFC Life Insurance Company Limited', 'Ambuja Cements Limited']
 # Get user inputs
-selected_stocks = st.multiselect("Select your stock", options=company_names)
+selected_stocks = st.multiselect("Select your stock", options=company_names,  default=default_stocks)
 start_date = st.date_input("Start Date", value=pd.to_datetime("2023-01-31", format="%Y-%m-%d"))
 end_date = st.date_input("End Date", value=pd.to_datetime("today", format="%Y-%m-%d"))
 
