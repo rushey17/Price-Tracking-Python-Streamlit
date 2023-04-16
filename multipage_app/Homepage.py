@@ -30,5 +30,9 @@ if st.button("Calculate"):
         result_table_df = utils.calculate_result_table(selected_stocks, start, end)
         format_dict = {'Start Price': '{:.2f}', 'Current Price': '{:.2f}', 'Percentage Change': '{:.2f}'}
         st.table(result_table_df.style.format(format_dict))
+        overall_percentage_change = result_table_df['Percentage Change'].sum()
+        st.write('Overall Percentage Change: ' + '<span style="color:green;font-weight:bold;">' + str(overall_percentage_change) + '%' + '</span>', unsafe_allow_html=True)
+
+
 
 
